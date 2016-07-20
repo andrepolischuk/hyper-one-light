@@ -1,5 +1,6 @@
 'use strict';
 const backgroundColor = '#fafafa';
+const darkBackgroundColor = '#f6f6f6';
 const foregroundColor = '#383a42';
 const red = '#e45649';
 const green = '#50a14f';
@@ -42,7 +43,7 @@ exports.decorateConfig = config => {
         left: 0;
       }
       .tabs_list {
-        background-color: ${backgroundColor} !important;
+        background-color: ${darkBackgroundColor} !important;
         border-bottom-color: rgba(0, 0, 0, .15) !important;
       }
       .tab_tab.tab_active {
