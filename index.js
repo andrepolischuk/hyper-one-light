@@ -46,6 +46,9 @@ exports.decorateConfig = config => {
         background-color: ${darkBackgroundColor} !important;
         border-bottom-color: rgba(0, 0, 0, .15) !important;
       }
+      .tab_tab {
+        color: ${lightGrey} !important;
+      }
       .tab_tab.tab_active {
         font-weight: 500;
         background-color: ${backgroundColor};
@@ -53,9 +56,6 @@ exports.decorateConfig = config => {
       }
       .tab_tab.tab_active::before {
         border-bottom-color: ${backgroundColor};
-      }
-      .tab_tab {
-        color: ${lightGrey} !important;
       }
       .tabs_title, .tab_icon, .tab_tab.tab_active {
         color: ${mediumGrey} !important;
