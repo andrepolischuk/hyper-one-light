@@ -6,6 +6,7 @@ const red = '#e45649';
 const green = '#50a14f';
 const yellow = '#c18401';
 const blue = '#4078f2';
+const darkBlue = '#475fd7';
 const magenta = '#a626a4';
 const cyan = '#0184bc';
 const lightGrey = '#a0a1a7';
@@ -46,6 +47,9 @@ exports.decorateConfig = config => {
         background-color: ${darkBackgroundColor} !important;
         border-bottom-color: rgba(0, 0, 0, .15) !important;
       }
+      .tab_tab {
+        color: ${lightGrey} !important;
+      }
       .tab_tab.tab_active {
         font-weight: 500;
         background-color: ${backgroundColor};
@@ -54,8 +58,23 @@ exports.decorateConfig = config => {
       .tab_tab.tab_active::before {
         border-bottom-color: ${backgroundColor};
       }
-      .tab_tab {
-        color: ${lightGrey} !important;
+      .tab_tab::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: 2;
+        top: 0px;
+        left: -1px;
+        bottom: -1px;
+        width: 2px;
+        border-radius: 0;
+        background: ${darkBlue};
+        opacity: 0;
+        transition: opacity .16s;
+      }
+      .tab_tab.tab_active::after {
+        opacity: 1;
+        transition-duration: .32s;
       }
       .tabs_title, .tab_icon, .tab_tab.tab_active {
         color: ${mediumGrey} !important;
