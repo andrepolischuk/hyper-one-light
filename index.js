@@ -9,8 +9,8 @@ const blue = '#4078f2';
 const darkBlue = '#475fd7';
 const magenta = '#a626a4';
 const cyan = '#0184bc';
-const lightGrey = '#a0a1a7';
-const mediumGrey = '#696c77';
+const white = '#a0a1a7';
+const lightBlack = '#696c77';
 
 exports.decorateConfig = config => {
   return Object.assign({}, config, {
@@ -18,24 +18,24 @@ exports.decorateConfig = config => {
     foregroundColor,
     borderColor: backgroundColor,
     cursorColor: foregroundColor,
-    colors: [
-      foregroundColor,
+    colors: {
+      black: backgroundColor,
       red,
       green,
       yellow,
       blue,
       magenta,
       cyan,
-      lightGrey,
-      mediumGrey,
-      red,
-      green,
-      yellow,
-      blue,
-      magenta,
-      cyan,
-      backgroundColor
-    ],
+      white,
+      lightBlack,
+      lightRed: red,
+      lightGreen: green,
+      lightYellow: yellow,
+      lightBlue: blue,
+      lightMagenta: magenta,
+      lightCyan: cyan,
+      lightWhite: foregroundColor
+    },
     css: `
       ${config.css || ''}
       .header_header {
@@ -48,7 +48,7 @@ exports.decorateConfig = config => {
         border-bottom-color: rgba(0, 0, 0, .15) !important;
       }
       .tab_tab {
-        color: ${lightGrey} !important;
+        color: ${white} !important;
       }
       .tab_tab.tab_active {
         font-weight: 500;
@@ -77,7 +77,7 @@ exports.decorateConfig = config => {
         transition-duration: .32s;
       }
       .tabs_title, .tab_icon, .tab_tab.tab_active {
-        color: ${mediumGrey} !important;
+        color: ${lightBlack} !important;
       }
       .tab_tab.tab_hasActivity {
         color: ${blue} !important;
