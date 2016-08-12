@@ -1,7 +1,7 @@
 {
   "name": "hyperterm-one-light",
   "version": "0.3.2",
-  "description": "Atom One Light theme for Hyperterm",
+  "description": "Atom One Light theme for HyperTerm",
   "main": "index.js",
   "files": [
     "index.js"

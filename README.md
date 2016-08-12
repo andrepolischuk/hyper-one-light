@@ -1,12 +1,12 @@
 # hyperterm-one-light
 
-> [Atom One Light][one-light] theme for [Hyperterm][hyperterm]
+> [Atom One Light][one-light] theme for [HyperTerm][hyperterm]
 
 ![](screenshot.png)
 
 ## Install
 
-Open your Hyperterm preferences and add `hyperterm-one-light` to plugin list:
+Open your HyperTerm preferences and add `hyperterm-one-light` to plugin list:
 
 ```js
 plugins: [
