@@ -81,6 +81,11 @@ exports.decorateConfig = config => Object.assign({}, config, {
     .tab_tab.tab_hasActivity {
       color: ${blue} !important;
     }
+    ${config.hypertermOneLight && config.hypertermOneLight.hideBlueBorder && `
+      .tab_tab::after {
+        display: none;
+      }
+    `}
   `,
   termCSS: `
     ${config.termCSS || ''}

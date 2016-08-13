@@ -14,6 +14,24 @@ plugins: [
 ],
 ```
 
+## Configuration
+
+In your `~/.hyperterm.js`, you can configure the visibility of the blue border
+that `hyperterm-one-light` displays on active tabs. By default the blue border
+for active tabs is visible.
+
+```js
+modules.exports = {
+  config: {
+    // other config...
+    hypertermOneLight: {
+      hideBlueBorder: true, // default: false
+    },
+  },
+  // ...
+};
+```
+
 ## License
 
 MIT
