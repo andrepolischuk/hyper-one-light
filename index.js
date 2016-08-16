@@ -1,12 +1,10 @@
 'use strict';
 const backgroundColor = '#fafafa';
-const darkBackgroundColor = '#e5e5e6';
 const foregroundColor = '#383a42';
 const red = '#e45649';
 const green = '#50a14f';
 const yellow = '#c18401';
 const blue = '#4078f2';
-const darkBlue = '#475fd7';
 const magenta = '#a626a4';
 const cyan = '#0184bc';
 const white = '#a0a1a7';
@@ -43,7 +41,7 @@ exports.decorateConfig = config => Object.assign({}, config, {
       left: 0;
     }
     .tabs_list {
-      background-color: ${darkBackgroundColor} !important;
+      background-color: #e5e5e6 !important;
       border-bottom-color: rgba(0, 0, 0, .15) !important;
     }
     .tab_tab {
@@ -67,7 +65,7 @@ exports.decorateConfig = config => Object.assign({}, config, {
       bottom: -1px;
       width: 2px;
       border-radius: 0;
-      background: ${darkBlue};
+      background: #475fd7;
       opacity: 0;
       transition: opacity .16s;
     }
