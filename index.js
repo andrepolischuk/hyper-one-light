@@ -14,7 +14,7 @@ exports.decorateConfig = config => Object.assign({}, config, {
   backgroundColor,
   foregroundColor,
   borderColor: backgroundColor,
-  cursorColor: foregroundColor,
+  cursorColor: '#526eff',
   colors: {
     black: foregroundColor,
     red,
@@ -83,7 +83,10 @@ exports.decorateConfig = config => Object.assign({}, config, {
   termCSS: `
     ${config.termCSS || ''}
     .cursor-node {
-      mix-blend-mode: difference;
+      mix-blend-mode: multiply;
+    }
+    .cursor-node[focus="false"] {
+      opacity: 0 !important;
     }
   `
 });
