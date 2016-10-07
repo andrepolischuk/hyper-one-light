@@ -40,10 +40,13 @@ exports.decorateConfig = config => Object.assign({}, config, {
       right: 0;
       left: 0;
     }
+    .tabs_list,
+    .splitpane_divider {
+      background-color: #e5e5e6 !important;
+    }
     .tabs_list {
       margin-left: 0 !important;
       padding-left: 76px;
-      background-color: #e5e5e6 !important;
     }
     .tabs_list::before {
       content: "";
