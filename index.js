@@ -41,11 +41,23 @@ exports.decorateConfig = config => Object.assign({}, config, {
       left: 0;
     }
     .tabs_list {
+      margin-left: 0 !important;
+      padding-left: 76px;
       background-color: #e5e5e6 !important;
-      border-bottom-color: rgba(0, 0, 0, .15) !important;
+    }
+    .tabs_list::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      width: 76px;
+      height: 1px;
+      background-color: #ccc;
     }
     .tab_tab {
       color: ${white} !important;
+      border-color: #ccc !important;
     }
     .tab_tab.tab_active {
       font-weight: 500;
@@ -62,10 +74,10 @@ exports.decorateConfig = config => Object.assign({}, config, {
       z-index: 2;
       top: 0px;
       left: -1px;
-      bottom: -1px;
+      bottom: 0;
       width: 2px;
       border-radius: 0;
-      background: #475fd7;
+      background-color: #475fd7;
       opacity: 0;
       transition: opacity .16s;
     }
