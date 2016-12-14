@@ -14,6 +14,14 @@ plugins: [
 ],
 ```
 
+Or append follows lines if you want add a vibrancy effect:
+
+```js
+plugins: [
+  'hyper-one-light/vibrancy'
+],
+```
+
 ## Tips
 
 In the screenshot hyper-one-light is running with [neat][neat] prompt and Menlo font.
