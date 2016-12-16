@@ -14,12 +14,12 @@ plugins: [
 ],
 ```
 
-Or append follows lines if you want add a vibrancy effect:
+## Vibrancy
+
+Add follows line to config for enable the light vibrancy effect:
 
 ```js
-plugins: [
-  'hyper-one-light/vibrancy'
-],
+enableVibrancy: true
 ```
 
 ## Tips
