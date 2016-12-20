@@ -1,6 +1,6 @@
 {
   "name": "hyper-one-light",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Atom One Light theme for Hyper",
   "main": "index.js",
   "files": [
