@@ -14,9 +14,19 @@ plugins: [
 ],
 ```
 
+## Vibrancy
+
+![](screenshot-vibrancy.png)
+
+Add follows line to config for enable the light vibrancy effect:
+
+```js
+enableVibrancy: true
+```
+
 ## Tips
 
-In the screenshot hyper-one-light is running with [neat][neat] prompt and Menlo font.
+In the screenshot hyper-one-light is running with [min][min] prompt and Menlo font.
 
 To colorize commands as in the screenshot, install [zsh-syntax-highlighting][zsh-syntax-highlighting].
 
@@ -26,5 +36,5 @@ MIT
 
 [one-light]: https://github.com/atom/one-light-syntax
 [hyper]: https://hyper.is
-[neat]: https://github.com/andrepolischuk/neat
+[min]: https://github.com/andrepolischuk/min
 [zsh-syntax-highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
