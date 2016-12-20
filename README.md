@@ -24,6 +24,13 @@ Add follows line to config for enable the light vibrancy effect:
 enableVibrancy: true
 ```
 
+## Highlight active pane
+
+[hyper-simple-highlight-active-session][] works perfectly fine to highlight active pane.
+
+[hyper-simple-highlight-active-session]: https://github.com/matheuss/hyper-simple-highlight-active-session
+
+
 ## Tips
 
 In the screenshot hyper-one-light is running with [min][min] prompt and Menlo font.
