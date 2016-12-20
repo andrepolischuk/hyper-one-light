@@ -16,6 +16,8 @@ plugins: [
 
 ## Vibrancy
 
+![](screenshot-vibrancy.png)
+
 Add follows line to config for enable the light vibrancy effect:
 
 ```js
