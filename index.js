@@ -15,7 +15,7 @@ exports.decorateConfig = config => {
   const decoratedConfig = Object.assign({}, config, {
     backgroundColor,
     foregroundColor,
-    borderColor: backgroundColor,
+    borderColor: 'transparent',
     cursorColor: '#526eff',
     colors: {
       black: foregroundColor,
@@ -43,12 +43,11 @@ exports.decorateConfig = config => {
         left: 0;
       }
       .splitpane_divider {
-        background-color: #e5e5e6 !important;
+        background-color: rgba(0, 0, 0, .12) !important;
       }
       .tabs_list {
         margin-left: 0 !important;
         padding-left: 76px;
-        background-color: ${backgroundColor} !important;
       }
       .tabs_list::before {
         content: "";
@@ -58,21 +57,20 @@ exports.decorateConfig = config => {
         left: 0;
         bottom: 0;
         width: 76px;
-        background-color: rgba(125, 125, 125, 0.15) !important;
-        border-bottom: 1px solid #ccc;
+        background-color: rgba(50, 50, 50, .09) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
       }
       .tab_tab {
-        color: ${white} !important;
-        background-color: rgba(125, 125, 125, 0.15) !important;
-        border-color: #ccc !important;
+        color: rgba(0, 0, 0, .3) !important;
+        background-color: rgba(50, 50, 50, .09) !important;
+        border-color: rgba(0, 0, 0, .12) !important;
       }
       .tab_tab.tab_active {
         font-weight: 500;
-        background-color: ${backgroundColor} !important;
-        border-color: rgba(0, 0, 0, .25) !important;
+        background-color: transparent !important;
       }
       .tab_tab.tab_active::before {
-        border-bottom-color: ${backgroundColor};
+        border-bottom-color: transparent;
       }
       .tab_tab::after {
         content: "";
@@ -93,7 +91,7 @@ exports.decorateConfig = config => {
         transition-duration: .32s;
       }
       .tabs_title, .tab_icon, .tab_tab.tab_active {
-        color: ${lightBlack} !important;
+        color: rgba(0, 0, 0, .57) !important;
       }
       .tab_tab.tab_hasActivity {
         color: ${blue} !important;
