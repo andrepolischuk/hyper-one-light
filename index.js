@@ -12,6 +12,11 @@ const lightBlack = '#696c77';
 exports.decorateConfig = config => {
   const backgroundColor = config.enableVibrancy ? 'transparent' : '#fafafa';
 
+  let windowControlsCSS;
+  if (config.showWindowControls) {
+    windowControlsCSS = `.header_shape { color: ${foregroundColor}; }`;
+  }
+
   const decoratedConfig = Object.assign({}, config, {
     backgroundColor,
     foregroundColor,
@@ -96,6 +101,7 @@ exports.decorateConfig = config => {
       .tab_tab.tab_hasActivity {
         color: ${blue} !important;
       }
+      ${windowControlsCSS}
     `,
     termCSS: `
       ${config.termCSS || ''}
