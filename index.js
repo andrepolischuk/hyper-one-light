@@ -14,7 +14,7 @@ exports.decorateConfig = config => {
 
   let windowControlsCSS;
   if (config.showWindowControls) {
-    windowControlsCSS = `.shape_1oxq { color: ${foregroundColor}; }`;
+    windowControlsCSS = `.header_shape { color: ${foregroundColor}; }`;
   }
 
   const decoratedConfig = Object.assign({}, config, {
