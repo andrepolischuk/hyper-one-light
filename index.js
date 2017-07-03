@@ -11,10 +11,26 @@ const lightBlack = '#696c77';
 
 exports.decorateConfig = config => {
   const backgroundColor = config.enableVibrancy ? 'transparent' : '#fafafa';
+  let tabListStyles = '';
 
-  let windowControlsCSS;
-  if (config.showWindowControls) {
-    windowControlsCSS = `.header_shape { color: ${foregroundColor}; }`;
+  if (process.platform === 'darwin') {
+    tabListStyles = `
+      .tabs_list {
+        margin-left: 0 !important;
+        padding-left: 76px;
+      }
+      .tabs_list::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 76px;
+        background-color: rgba(50, 50, 50, .09) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+      }
+    `;
   }
 
   const decoratedConfig = Object.assign({}, config, {
@@ -47,24 +63,14 @@ exports.decorateConfig = config => {
         right: 0;
         left: 0;
       }
+      .header_shape,
+      .header_appTitle {
+        color: ${foregroundColor};
+      }
       .splitpane_divider {
         background-color: rgba(0, 0, 0, .12) !important;
       }
-      .tabs_list {
-        margin-left: 0 !important;
-        padding-left: 76px;
-      }
-      .tabs_list::before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 76px;
-        background-color: rgba(50, 50, 50, .09) !important;
-        border-bottom: 1px solid rgba(0, 0, 0, .12);
-      }
+      ${tabListStyles}
       .tab_tab {
         color: rgba(0, 0, 0, .3) !important;
         background-color: rgba(50, 50, 50, .09) !important;
@@ -101,7 +107,6 @@ exports.decorateConfig = config => {
       .tab_tab.tab_hasActivity {
         color: ${blue} !important;
       }
-      ${windowControlsCSS}
     `,
     termCSS: `
       ${config.termCSS || ''}
