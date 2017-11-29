@@ -111,7 +111,7 @@ exports.decorateConfig = config => {
     termCSS: `
       ${config.termCSS || ''}
       x-row a {
-        color: ${magenta};
+        color: ${cyan};
       }
       .cursor-node {
         mix-blend-mode: multiply;
